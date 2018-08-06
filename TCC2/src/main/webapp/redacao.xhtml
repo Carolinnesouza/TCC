@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Gerenciador de Redacao</title>
+</h:head>
+
+
+<h:body>
+
+	<h:form>
+
+		<p:panelGrid columns="4" style="margin-top: 20px" > 
+
+			<h:outputText value="Autor:" />
+			<h:inputText value="#{basicoBean.redacao.autor}" />
+
+			<h:outputText value="Id:" />
+			<h:inputText value="#{basicoBean.redacao.id}" />
+
+
+			<h:outputText value="Metodos" />
+			<h:inputText value="#{basicoBean.redacao.metodospmelhorar}" />
+
+	<br>
+			</br>
+		</p:panelGrid>
+
+		<p:textEditor value="#{basicoBean.redacao.texto}" height="450"></p:textEditor>
+		
+		
+	
+ <p:panelGrid columns="4" style="margin-top: 50px" > 
+
+	<h:dataTable var="red" value="#{basicoBean.redacoes}">
+	
+		<h:column>
+			<f:facet name="header">Autor </f:facet>
+			<h:outputText value="#{red.autor}" />
+		</h:column>
+		
+		<h:column>
+			<f:facet name="header">Id</f:facet>
+			<h:outputText value="#{red.id}" />
+		</h:column>
+		
+		<h:column>
+			<f:facet name="header">Texto</f:facet>
+			<h:outputText value="#{red.texto}" />
+		</h:column>
+		
+		<h:column>
+			<f:facet name="header">Metodospmelhorar</f:facet>
+			<h:outputText value="#{red.metodospmelhorar}" />
+		</h:column>
+		
+	</h:dataTable>
+
+			</p:panelGrid>
+		
+			
+			
+		<h:commandButton value="Criar redação"
+			action="#{basicoBean.addRedacao()}"></h:commandButton>
+			
+		
+			
+		<br> Id redação: 
+		<h:inputText value="#{basicoBean.id}"></h:inputText>
+		</br>
+		<br>
+		<h:commandButton value="Remover redação"
+			action="#{basicoBean.removeRedacao()}"></h:commandButton>
+		<h:commandButton value="Buscar redação"
+			action="#{basicoBean.buscarRedacao()}"></h:commandButton>
+
+		<h:commandButton value="Atualizar redação"
+			action="#{basicoBean.atualizar()}"></h:commandButton>
+
+		</br>
+
+	</h:form>
+
+
+</h:body>
+
+</html>
