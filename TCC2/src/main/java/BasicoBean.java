@@ -2,16 +2,17 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
+import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 
-@ManagedBean
-@ApplicationScoped
-
+@ViewScoped
+@Named
 public class BasicoBean {
-
+	
 	private List<Redacao> redacoes = new ArrayList<Redacao>();
-
+	
+	@Inject
 	private int id;
 	private Redacao redacao;
 	private Redacao autor;
@@ -51,9 +52,9 @@ public class BasicoBean {
 
 	public void addRedacao() {
 		redacoes.add(redacao);
-		redacao = new Redacao();
+		redacao = new Redacao(); 
 	}
-
+	
 	public void removeRedacao() {
 		for (Redacao redacao : redacoes) {
 			if (redacao.getId() == getId()) {

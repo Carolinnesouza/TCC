@@ -1,13 +1,14 @@
+package beans;
 
-public class Redacao {
+import br.edu.ifpb.esperanca.daw2.ifoto.entities.Identificavel;
+
+
+public class Redacao implements Identificavel{
 
 	private String texto;
-	private int id;
+	private Long id;
 	private String autor;
 	private String metodospmelhorar; 
-	private String login;
-	private String senha;
-	private String grupo; 
 
 	public String getMetodospmelhorar() {
 		return metodospmelhorar;
@@ -17,11 +18,11 @@ public class Redacao {
 		this.metodospmelhorar = metodospmelhorar;
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -41,17 +42,5 @@ public class Redacao {
 		this.texto = texto;
 	}
 
-	public Redacao(String texto, int id, String autor, String metodospmelhorar, String login, String senha,
-			String grupo) {
-		super();
-		this.texto = texto;
-		this.id = id;
-		this.autor = autor;
-		this.metodospmelhorar = metodospmelhorar;
-		this.login = login;
-		this.senha = senha;
-		this.grupo = grupo;
-	}
-	
 
 }
