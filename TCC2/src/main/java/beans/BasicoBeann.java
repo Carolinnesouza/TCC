@@ -9,7 +9,7 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import br.edu.ifpb.esperanca.daw2.services.RedacaoService;
+import servicos.RedacaoService;
 
 @ViewScoped
 @Named

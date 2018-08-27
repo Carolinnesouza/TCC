@@ -13,10 +13,22 @@ public class BasicoBean {
 	private List<Redacao> redacoes = new ArrayList<Redacao>();
 	
 	@Inject
-	private int id;
+	private Long id;
 	private Redacao redacao;
 	private Redacao autor;
 	private Redacao metodospmelhorar;
+
+
+	
+	
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public Redacao getMetodospmelhorar() {
 		return metodospmelhorar;
@@ -24,18 +36,6 @@ public class BasicoBean {
 
 	public void setMetodospmelhorar(Redacao metodospmelhorar) {
 		this.metodospmelhorar = metodospmelhorar;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public BasicoBean() {
-		redacao = new Redacao();
 	}
 
 	public Redacao getRedacao() {
@@ -64,7 +64,7 @@ public class BasicoBean {
 		}
 	}
 				
-				public String buscarRedacao(Integer id) {
+				public String buscarRedacao(Long id) {
 					for (Redacao redacao : redacoes) {
 						if (redacao.getId() == id) {
 							 return redacao.getTexto();
@@ -72,7 +72,7 @@ public class BasicoBean {
 					}
 					return null;
 	}
-				public void atualizar(String texto , Integer id) {
+				public void atualizar(String texto , Long id) {
 					for (Redacao redacao : redacoes) {
 						if (redacao.getId() == id) {
 							redacao.setTexto(texto);
@@ -95,7 +95,7 @@ public class BasicoBean {
 		return autor;
 	}
 
-	public void setId_redacao(int id) {
+	public void setId_redacao(Long id) {
 		this.id = id;
 	}
 

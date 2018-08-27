@@ -1,25 +1,17 @@
-package br.edu.ifpb.esperanca.daw2.services;
+package servicos;
 
-import java.io.Serializable;
 import java.util.List;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
-import br.edu.ifpb.esperanca.daw2.dao.UsuarioDAO;
-import br.edu.ifpb.esperanca.daw2.ifoto.entities.Usuario;
-import br.edu.ifpb.esperanca.daw2.util.TransacionalCdi;
+import Dao.RedacaoDAO;
+import beans.Redacao;
+import util.TransacionalCdi;
 
-@ApplicationScoped
-public class UserService implements Serializable, Service<Redacao> {
+public class RedacaoService implements Service<Redacao>{
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -7803325791425670859L;
-	
 	@Inject
-	private UsuarioDAO userDAO;
+	private RedacaoDAO redacaoDAO;
 	
 	/* (non-Javadoc)
 	 * @see br.edu.ifpb.esperanca.daw2.services.Service#save(br.edu.ifpb.esperanca.daw2.ifoto.entities.Usuario)
@@ -27,7 +19,7 @@ public class UserService implements Serializable, Service<Redacao> {
 	@Override
 	@TransacionalCdi
 	public void save(Redacao user) {
-		userDAO.save(user);
+		redacaoDAO.save(user);
 	}
 
 	/* (non-Javadoc)
@@ -36,7 +28,7 @@ public class UserService implements Serializable, Service<Redacao> {
 	@Override
 	@TransacionalCdi
 	public void update(Redacao user)  {
-			userDAO.update(user);
+			redacaoDAO.update(user);
 	}
 
 	/* (non-Javadoc)
@@ -45,7 +37,7 @@ public class UserService implements Serializable, Service<Redacao> {
 	@Override
 	@TransacionalCdi
 	public void remove(Redacao user) {
-		userDAO.remove(user);
+		redacaoDAO.remove(user);
 	}
 
 	/* (non-Javadoc)
@@ -53,7 +45,7 @@ public class UserService implements Serializable, Service<Redacao> {
 	 */
 	@Override
 	public Redacao getByID(long userId)  {
-			return userDAO.getByID(userId);
+			return redacaoDAO.getByID(userId);
 	}
 
 	/* (non-Javadoc)
@@ -61,7 +53,7 @@ public class UserService implements Serializable, Service<Redacao> {
 	 */
 	@Override
 	public List<Redacao> getAll() {
-			return userDAO.getAll();
+			return redacaoDAO.getAll();
 	}
-		
+	
 }

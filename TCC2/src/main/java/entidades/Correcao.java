@@ -1,16 +1,20 @@
+package entidades;
 
-public class Correcao {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-	private int id_correcao;
+@Entity
+public class Correcao implements Identificavel{
+
+	@Id
+	private Long id;
 	private String autor_correcao; 
 	private int nota;
-	
-	
-	public int getId_correcao() {
-		return id_correcao;
+	public Long getId() {
+		return id;
 	}
-	public void setId_correcao(int id_correcao) {
-		this.id_correcao = id_correcao;
+	public void setId(Long id_correcao) {
+		this.id = id_correcao;
 	}
 	public String getAutor_correcao() {
 		return autor_correcao;
@@ -24,4 +28,8 @@ public class Correcao {
 	public void setNota(int nota) {
 		this.nota = nota;
 	}
-}
+	
+	
+	
+	}
+

@@ -1,4 +1,4 @@
-package br.edu.ifpb.esperanca.daw2.dao;
+package Dao;
 
 import beans.Redacao;
 

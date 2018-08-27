@@ -1,4 +1,4 @@
-package br.edu.ifpb.esperanca.daw2.ifoto.entities;
+package entidades;
 
 public interface Identificavel {
 

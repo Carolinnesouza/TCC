@@ -1,6 +1,6 @@
 package beans;
 
-import br.edu.ifpb.esperanca.daw2.ifoto.entities.Identificavel;
+import entidades.Identificavel;
 
 
 public class Redacao implements Identificavel{
