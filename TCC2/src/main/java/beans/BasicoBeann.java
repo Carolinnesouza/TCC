@@ -8,12 +8,16 @@ import javax.annotation.PostConstruct;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.persistence.Id;
 
 import servicos.RedacaoService;
 
 @ViewScoped
 @Named
 public class BasicoBeann implements Serializable {
+	
+	@Id
+	private Long id;
 
 	@Inject
 	private RedacaoService service;
@@ -65,5 +69,11 @@ public class BasicoBeann implements Serializable {
 	public RedacaoService getService() {
 		return service;
 	}
+	public Long getId() {
+		return id;
+	}
 
+	public void setId(Long id) {
+		this.id = id;
+	}
 }
