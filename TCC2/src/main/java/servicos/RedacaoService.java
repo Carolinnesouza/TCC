@@ -5,7 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import Dao.RedacaoDAO;
-import beans.Redacao;
+import entidades.Redacao;
 import util.TransacionalCdi;
 
 public class RedacaoService implements Service<Redacao>{

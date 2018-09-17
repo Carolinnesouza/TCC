@@ -1,6 +1,6 @@
 package Dao;
 
-import beans.Redacao;
+import entidades.Redacao;
 
 
 public class RedacaoDAO extends DAO<Redacao> {

@@ -10,6 +10,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.Id;
 
+import entidades.Redacao;
 import servicos.RedacaoService;
 
 @ViewScoped
