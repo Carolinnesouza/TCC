@@ -7,10 +7,15 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<non-jta-data-source>java:/TCC2DS</non-jta-data-source>
 	
+	
+	    <!-- entidade mapeada -->
 		<class>entidades.Redacao</class>
-		<class>entidades.Correcao</class>
 		<class>entidades.Metodospmelhorar</class>
 		<class>entidades.Usuario</class>
+		<class>entidades.Comentario</class>
+		
+		
+		<!-- propriedades do hibernate -->
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.show_sql" value="true" />
