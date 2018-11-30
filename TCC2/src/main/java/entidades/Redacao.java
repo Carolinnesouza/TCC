@@ -36,8 +36,6 @@ public class Redacao implements Identificavel {
 	private String senha;
 	private String grupo; 
 
-
-
 	public String getTexto() {
 		return texto;
 	}
