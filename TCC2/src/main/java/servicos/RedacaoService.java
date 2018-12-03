@@ -2,12 +2,14 @@ package servicos;
 
 import java.util.List;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 import Dao.RedacaoDAO;
 import entidades.Redacao;
 import util.TransacionalCdi;
 
+@ApplicationScoped
 public class RedacaoService implements Service<Redacao>{
 
 	@Inject

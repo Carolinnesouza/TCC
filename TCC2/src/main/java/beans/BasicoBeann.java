@@ -8,7 +8,6 @@ import javax.annotation.PostConstruct;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.persistence.Id;
 
 import entidades.Redacao;
 import servicos.RedacaoService;
@@ -17,7 +16,7 @@ import servicos.RedacaoService;
 @Named
 public class BasicoBeann implements Serializable {
 	
-	@Id
+
 	private Long id;
 
 	@Inject

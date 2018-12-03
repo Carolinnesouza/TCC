@@ -2,12 +2,14 @@ package servicos;
 
 import java.util.List;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 import Dao.ComentarioDAO;
 import entidades.Comentario;
 import util.TransacionalCdi;
 
+@ApplicationScoped
 public class ComentarioService implements Service<Comentario>{
 
 		@Inject

@@ -20,11 +20,11 @@ public class Redacao implements Identificavel {
 	private Long id;
 	
 	@ManyToOne
-	@JoinColumn(name="id_metodos_melhorar")
+	@JoinColumn(name="id_autor")
 	private Usuario autor;
 	
 	@ManyToOne
-	@JoinColumn(name="id_metodos_melhorar")
+	@JoinColumn(name="id_revisor")
 	private Usuario revisor;
 	
 	@OneToMany(mappedBy="redacao")
